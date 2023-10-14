@@ -5,7 +5,7 @@ availability
 nickname
 currentOrderId
 phoneNumber
-byType (mivel megy a tetya)
+rideType (mivel megy a tetya)
 rating
 
 
@@ -28,7 +28,17 @@ courierId
 customerId
 food
 deliveryTime
+status
 cost
+
+
+Food
+
+foodId
+price
+weight
+isfragile
+requiresfreezer
 
 
 
