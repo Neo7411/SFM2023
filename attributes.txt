@@ -35,6 +35,7 @@ cost
 Food
 
 foodId
+name
 price
 weight
 isfragile
