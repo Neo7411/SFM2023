@@ -5,45 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13b8aede-9a15-4a65-b19b-22f07b541ec8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaFxCs14.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_archetype.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/unideb/inf/FXMLStudentsSceneController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/unideb/inf/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/unideb/inf/MainApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/unideb/inf/model/Courier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/unideb/inf/model/CourierModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/unideb/inf/model/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/unideb/inf/model/CustomerModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/unideb/inf/model/Food.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/unideb/inf/model/FoodModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/unideb/inf/model/Model.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/unideb/inf/model/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/FXMLStudentsScene.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/Styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentsRegister2-1.0-SNAPSHOT-shaded.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentsRegister2-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/FXMLStudentsScene.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hu/unideb/inf/FXMLStudentsSceneController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hu/unideb/inf/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hu/unideb/inf/MainApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hu/unideb/inf/model/Model.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hu/unideb/inf/model/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/styles/Styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Foodora/Volt/model/Courier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Foodora/Volt/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Foodora/Volt/model/Food.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Foodora/Volt/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Foodora/Volt/VoltApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Foodora/Volt/VoltApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,24 +38,33 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2WkV6ajO8u3uPrBbgBmJQdTECw5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;SpringBootInit&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Egyetem/Tanulas/SFM/SFM2023&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="VoltApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Volt" />
@@ -93,7 +82,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697276394218</updated>
-      <workItem from="1697276396569" duration="53000" />
+      <workItem from="1697276396569" duration="9178000" />
+      <workItem from="1697286023146" duration="21000" />
     </task>
     <servers />
   </component>
