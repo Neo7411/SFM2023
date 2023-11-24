@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
@@ -57,5 +58,23 @@ public class UserController {
             return "newUserForm";
         }
         return "redirect:/users";
+    }
+
+
+    @GetMapping("/users/login")
+    public String showLoginPage() {
+        return "login";
+    }
+    @PostMapping("/users/login")
+    public String loginUser(@RequestParam String email, @RequestParam String password, Model model, RedirectAttributes rd){
+        User user = userRepository.findByEmail(email);
+
+        if ( user != null && user.getPassword().equals(password)){
+            return "redirect:/items";
+        }else {
+            model.addAttribute("error", "Invalid!!!!!!!!!!!!!!");
+            return  "redirect:/index";
+
+        }
     }
 }

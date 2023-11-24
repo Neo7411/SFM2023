@@ -1,7 +1,7 @@
-package hu.unideb.bootstrap_test.controller;
+package hu.unideb.BootstrapApplication.controller;
 
-import hu.unideb.bootstrap_test.model.Courier;
-import hu.unideb.bootstrap_test.model.CourierRepository;
+import hu.unideb.BootstrapApplication.Entity.Courier;
+import hu.unideb.BootstrapApplication.Repository.CourierRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

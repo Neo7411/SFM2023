@@ -20,5 +20,6 @@ public class Courier {
     @GeneratedValue
     private Integer id;
     private String name;
-    private boolean avalibility;
+    private Integer orders;
+
 }

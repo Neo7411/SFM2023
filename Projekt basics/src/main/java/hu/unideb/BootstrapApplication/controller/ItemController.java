@@ -2,6 +2,7 @@ package hu.unideb.BootstrapApplication.controller;
 
 import hu.unideb.BootstrapApplication.Entity.Item;
 import hu.unideb.BootstrapApplication.Repository.ItemRepository;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +13,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.ArrayList;
 
 @Controller
 public class ItemController {
@@ -60,4 +62,31 @@ public class ItemController {
         }
         return "redirect:/items";
     }
+    @GetMapping("/items/basket/{id}")
+    public String addToBasket(@PathVariable Integer id, HttpSession session){
+        Item itemToAdd = itemRepository.findById(id).orElse(null);
+        if (itemToAdd != null){
+            List<Item> basket = (List<Item>) session.getAttribute("basket");
+            if (basket == null){
+                basket = new ArrayList<>();
+            }
+            basket.add(itemToAdd);
+            session.setAttribute("basket", basket);
+        }
+        return "redirect:/items";
+    }
+
+    @GetMapping("/items/removeFromBasket/{id}")
+    public String removeFromBasket(@PathVariable Integer id, HttpSession session){
+        Item itemToRemove = itemRepository.findById(id).orElse(null);
+        if (itemToRemove != null){
+            List<Item> basket = (List<Item>) session.getAttribute("basket");
+            if (basket != null){
+                basket.remove(itemToRemove);
+                session.setAttribute("basket", basket);
+            }
+        }
+        return "redirect:/items";
+    }
+    
 }
