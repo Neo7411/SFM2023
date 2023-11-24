@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>hu.unideb</groupId>
-    <artifactId>FoodoraVolt</artifactId>
+    <artifactId>bootstrap_test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>bootstrap_test</name>
     <description>bootstrap_test</description>

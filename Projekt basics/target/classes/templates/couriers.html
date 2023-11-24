@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage couriers</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<a class="h1" th:href="@{/}">Main Page</a>
+<div class="text-center">
+    <br>
+    <!--<a th:href="@{'/couriers/new'}">Add new courier</a>-->
+    <table class="table table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th>First name</th>
+            <th>Orders</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <th:block th:each="courier: ${couriersList}">
+            <tr>
+                <td th:text="${courier.name}"/>
+                <td th:text="${courier.orders}"/>
+                <td>
+                    <a th:href="@{'/couriers/select' + ${courier.id}}">Select</a>
+                </td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
