@@ -26,7 +26,6 @@ class BootstrapApplicationTests {
                 .lastName("Bela")
                 .email("asd@gmail")
                 .password("asdasd")
-                .enabled(true)
                 .address("Vorosmarty ut mihaly 6")
                 .build();
         User actual = UserRepository.save(
