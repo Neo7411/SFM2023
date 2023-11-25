@@ -1,5 +1,6 @@
 package hu.unideb.bootstrap_app.Entity;
 
+import hu.unideb.bootstrap_app.TestClasses.ItemDataReader;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -21,4 +22,6 @@ public class Item {
     private Integer id;
     private String name;
     private Integer price;
+
+
 }

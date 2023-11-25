@@ -20,5 +20,5 @@ public class Courier {
     @GeneratedValue
     private Integer id;
     private String name;
-    private Integer orders;
+    private boolean IsAvailable;
 }
