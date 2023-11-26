@@ -14,6 +14,8 @@ import org.springframework.stereotype.Component;
 @SpringBootApplication
 @EntityScan(basePackages = {"hu.unideb.bootstrap_app.Entity"})
 @EnableJpaRepositories(basePackages = {"hu.unideb.bootstrap_app.Repositories"})
+
+
 public class BootstrapApplication implements CommandLineRunner {
 
     public static void main(String[] args) {

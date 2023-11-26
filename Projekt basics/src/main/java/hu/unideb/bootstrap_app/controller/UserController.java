@@ -67,17 +67,17 @@ public class UserController {
 
     @PostMapping("/users/login")
     public String loginUser(@RequestParam String email, @RequestParam String password, Model model, RedirectAttributes rd){
-            // Retrieve the user by email from the UserRepository
-            User user = userRepository.findByEmail(email);
+        // Retrieve the user by email from the UserRepository
+        User user = userRepository.findByEmail(email);
 
-            if (user != null && user.getPassword().equals(password)) {
-                // Valid user credentials
-                return "redirect:/items"; // Redirect to the dashboard or items page
-            } else {
-                // Invalid credentials or user not found
-                model.addAttribute("error", "Invalid email or password");
-                return "redirect:/index"; // Redirect back to the login page with an error message
-            }
+        if (user != null && user.getPassword().equals(password)) {
+            // Valid user credentials
+            return "redirect:/items"; // Redirect to the dashboard or items page
+        } else {
+            // Invalid credentials or user not found
+            model.addAttribute("error", "Invalid email or password");
+            return "redirect:/index"; // Redirect back to the login page with an error message
+        }
     }
 
 }

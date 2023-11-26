@@ -16,16 +16,13 @@
       <input type="text" class="form-control" th:field="*{firstName}" id="firstName" placeholder="First name" required minlength=2>
     </div>
     <div class="form-group">
-      <label for="exampleInputEmail1">Last Name</label>
+      <label for="exampleInputEmail1">Email address</label>
       <input type="text" class="form-control" th:field="*{lastName}"id="lastName" placeholder="Last name">
     </div>
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" th:field="*{email}" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Delivery address</label>
-      <input type="adress" class="form-control" th:field="*{address}" id="Delivery address" aria-describedby="emailHelp" placeholder="Delivery address">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>

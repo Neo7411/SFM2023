@@ -13,7 +13,7 @@ public class DatabaseInit {
     ItemRepository itemRepository;
     @Autowired
     CourierRepository courierRepository;
-    public void ItemDatabaseInit(){
+    public void ItemDatabaseInit() {
         itemRepository.save(new Item(1,"Kenyér",  1000));
         itemRepository.save(new Item(2,"Tej",  300));
         itemRepository.save(new Item(3,"Sajt",  2000));

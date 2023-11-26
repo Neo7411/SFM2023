@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>hu.unideb</groupId>
-    <artifactId>FoodoraVolt</artifactId>
+    <artifactId>Foodpandora</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>bootstrap_test</name>
-    <description>bootstrap_test</description>
+    <name>bootstrap_app</name>
+    <description>bootstrap_app</description>
     <properties>
         <java.version>17</java.version>
     </properties>
