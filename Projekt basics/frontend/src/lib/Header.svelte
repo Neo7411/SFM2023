@@ -10,7 +10,7 @@
     var cartCount = 5
 </script>
 
-<Navbar class="border-b border-gray-200 mb-5">
+<Navbar class="w-10/12 mx-auto">
     <NavBrand href="/home">
         <img src={Logo} class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
         <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Foodpandora</span>
@@ -21,10 +21,10 @@
             <NavLi href="/about">About</NavLi>
             <NavLi href="/contact">Contact</NavLi>
         </NavUl>
-        <Button href="/cart" class="relative bg-purple-100 mx-5 hover:bg-purple-200" size="sm">
+        <Button href="/courier" class="relative bg-purple-100 mx-5 hover:bg-purple-200" size="sm">
             <CartOutline class="text-purple-800" />
             <span class="sr-only">Notifications</span>
-            <Indicator color="purple" border size="xl" placement="top-right" class="text-xs font-bold">{cartCount}</Indicator>
+            <Indicator border size="xl" placement="top-right" class="text-xs font-bold bg-purple-950 rounded-lg">{cartCount}</Indicator>
         </Button>
         <Avatar id="avatar-menu" src={BlankProfile} class="cursor-pointer"/>
         <NavHamburger class1="w-full md:flex md:w-auto md:order-1" />
@@ -39,5 +39,5 @@
         <DropdownItem>Earnings</DropdownItem> -->
         <DropdownItem class="text-red-600" href="/">Sign out</DropdownItem>
     </Dropdown>
-
 </Navbar>
+<div class="border-b border-gray-200 w-full mb-5"></div>

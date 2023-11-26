@@ -9,13 +9,13 @@
         <a href="/"><img src={Logo} alt="Foodpandora logo" class="mt-5"/></a>
         <div class="flex-row">
           <h1 class="text-5xl font-extrabold mt-[20%]">Sign up</h1>
-          <p class="text-gray-600">Sign in with your credentials that you entered during registration</p>
+          <p class="text-gray-600 mt-1">Fill in the sign up form to register.</p>
           <div class="flex gap-3">
-              <Label class="mt-5 text-gray-600">
+              <Label class="mt-5 w-full text-gray-600">
                 <span>First name</span>
                 <Input type="text" placeholder="First name" size="md" />
               </Label>
-              <Label class="mt-5 text-gray-600">
+              <Label class="mt-5 w-full text-gray-600">
                 <span>Last name</span>
                 <Input type="text" placeholder="Last name" size="md" />
               </Label>

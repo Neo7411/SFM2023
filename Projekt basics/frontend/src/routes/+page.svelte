@@ -9,7 +9,7 @@
       <a href="/"><img src={Logo} alt="Foodpandora logo" class="mt-5"/></a>
       <div class="flex-row mt-[30%]">
         <h1 class="text-5xl font-extrabold">Login</h1>
-        <p class="text-gray-600">Sign in with your credentials that you entered during registration</p>
+        <p class="text-gray-600 mt-1">Sign in with your credentials that you entered during registration</p>
         <Label class="mt-5 text-gray-600">
           <span>Email</span>
           <Input type="email" placeholder="name@example.com" size="md" />
