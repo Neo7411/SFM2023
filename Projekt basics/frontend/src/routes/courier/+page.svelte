@@ -1,0 +1,68 @@
+<script>
+    import Header from "$lib/Header.svelte";
+    import Footer from "$lib/Footer.svelte";
+	import { Button } from "flowbite-svelte";
+    import { Radio } from 'flowbite-svelte';
+    import Mcisti from "$lib/images/couriers/mcisti.png"
+    import Jozsef from "$lib/images/couriers/jozsef.png"
+    import Antonio from "$lib/images/couriers/antonio.png"
+    import Tbor from "$lib/images/couriers/t-bor.png"
+
+    let courier = "mcisti"
+</script>
+
+<Header />
+<div class="flex w-8/12 m-auto gap-10">
+    <div class="w-2/3">
+        <p class="text-3xl font-bold">Select Courier</p>
+
+          <p class="mb-5 text-lg font-medium text-gray-900 dark:text-white">Choose your hero</p>
+          <div class="flex-row w-full">
+
+            <Radio class="mb-3" name="custom" bind:group={courier} value="mcisti" custom>
+              <div class="inline-flex items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer peer-checked:border-[2px] peer-checked:bg-gradient-to-l from-indigo-200 via-pink-200 to-yellow-100  peer-checked:border-blue-800  hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img src={Mcisti} alt="mcisti"/>
+                <div class="ml-3">
+                    <p class="font-bold text-black">Mc István</p>
+                    <p class="text-gray-500">Máv</p>
+                </div>
+              </div>
+            </Radio>
+            <Radio class="mb-3" name="custom" bind:group={courier} value="jozsef" custom>
+                <div class="inline-flex items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer peer-checked:border-[2px] peer-checked:bg-gradient-to-l from-indigo-200 via-pink-200 to-yellow-100  peer-checked:border-blue-800  hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                  <img src={Jozsef} alt="jozsef"/>
+                  <div class="ml-3">
+                      <p class="font-bold text-black">Jozsef</p>
+                      <p class="text-gray-500">Motorbike</p>
+                  </div>
+                </div>
+            </Radio>
+            <Radio class="mb-3" name="custom" bind:group={courier} value="t-bor" custom>
+                <div class="inline-flex items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer peer-checked:border-[2px] peer-checked:bg-gradient-to-l from-indigo-200 via-pink-200 to-yellow-100  peer-checked:border-blue-800  hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                  <img src={Tbor} alt="t-bor"/>
+                  <div class="ml-3">
+                      <p class="font-bold text-black">T-bor</p>
+                      <p class="text-gray-500">E-bike</p>
+                  </div>
+                </div>
+            </Radio>
+            <Radio class="mb-3" name="custom" bind:group={courier} value="antonio" custom>
+                <div class="inline-flex items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer peer-checked:border-[2px] peer-checked:bg-gradient-to-l from-indigo-200 via-pink-200 to-yellow-100  peer-checked:border-blue-800 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                  <img src={Antonio} alt="antonio"/>
+                  <div class="ml-3">
+                      <p class="font-bold text-black">Antonio</p>
+                      <p class="text-gray-500">Tram no.2</p>
+                  </div>
+                </div>
+            </Radio>
+
+          </div>
+
+        <Button href="/home" class="w-full h-11 px-4 py-3 bg-gradient-to-l from-indigo-800 via-pink-700 to-yellow-500 rounded-lg shadow justify-start items-center gap-2 inline-flex mt-5">
+            <p class="text-center w-full font-extrabold">Order</p>
+        </Button>
+    </div>
+    <div class="rounded-2xl overflow-hidden" style="width: 100%"><iframe title="map" width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=debrecen+(My%20Business%20Name)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/">Population calculator map</a></iframe></div>
+</div>
+
+<Footer/>
