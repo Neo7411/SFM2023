@@ -20,9 +20,8 @@ public class Orders {
     @GeneratedValue
     private Integer id; //Order ID
     private Integer userId;
-    private Integer CourierId;
-    private String orderStatus;
+    private Integer courierId;
+    private String orderName;
     private String deliveryAddress;
-    private Integer orderTimeStamp;
-    private Integer totalPrice;
+    private Integer price;
 }

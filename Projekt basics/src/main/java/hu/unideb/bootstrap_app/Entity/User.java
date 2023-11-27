@@ -1,9 +1,6 @@
 package hu.unideb.bootstrap_app.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,6 +18,7 @@ public class User {
     private Integer id;
     private String firstName;
     private String lastName;
+    @Column(unique = true)
     private String email;
     private String password;
     private String address;

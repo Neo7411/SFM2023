@@ -4,10 +4,29 @@
     import BlankProfile from "$lib/images/blankProfile.jpg"
     import { Button, Indicator } from 'flowbite-svelte';
     import { CartOutline } from 'flowbite-svelte-icons';
+    import { logged_in } from '../stores';
+    import { first, last, address, basket, email } from '../stores';
+    import { goto } from '$app/navigation';
+    import { createEventDispatcher } from 'svelte';
+    
+    const dispatch = createEventDispatcher();
 
-    var name = "John Doe"
-    var email = "johndoe@whatever.com"
-    var cartCount = 5
+    function onButtonClick() {
+        dispatch('buttonPressed');
+    }
+
+    export let basketCount = 0
+
+    var name = localStorage.getItem("first") + " " + localStorage.getItem("last")
+    $:cartCount = basketCount
+
+
+    function logout() {
+        localStorage.setItem("logged_in", "false")
+        goto("/")
+    }
+
+    
 </script>
 
 <Navbar class="w-10/12 mx-auto">
@@ -21,7 +40,7 @@
             <NavLi href="/about">About</NavLi>
             <NavLi href="/contact">Contact</NavLi>
         </NavUl>
-        <Button href="/courier" class="relative bg-purple-100 mx-5 hover:bg-purple-200" size="sm">
+        <Button href="/courier" class="relative bg-purple-100 mx-5 hover:bg-purple-200" size="sm" on:click={onButtonClick}>
             <CartOutline class="text-purple-800" />
             <span class="sr-only">Notifications</span>
             <Indicator border size="xl" placement="top-right" class="text-xs font-bold bg-purple-950 rounded-lg">{cartCount}</Indicator>
@@ -32,12 +51,12 @@
     <Dropdown placement="bottom" triggeredBy="#avatar-menu">
         <DropdownHeader>
         <span class="block text-sm">{name}</span>
-        <span class="block truncate text-sm font-medium">{email}</span>
+        <span class="block truncate text-sm font-medium">{localStorage.getItem("email")}</span>
         </DropdownHeader>
         <!-- <DropdownItem>Dashboard</DropdownItem>
         <DropdownItem>Settings</DropdownItem>
         <DropdownItem>Earnings</DropdownItem> -->
-        <DropdownItem class="text-red-600" href="/">Sign out</DropdownItem>
+        <DropdownItem class="text-red-600" on:click={logout}>Sign out</DropdownItem>
     </Dropdown>
 </Navbar>
 <div class="border-b border-gray-200 w-full mb-5"></div>

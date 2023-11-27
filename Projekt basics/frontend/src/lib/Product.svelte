@@ -7,11 +7,13 @@
     import Sushi from "$lib/images/foods/sushi.jpg"
     import { Button } from "flowbite-svelte"
 
+    export let count = 0
+    export let price = 0
     export let type = "burger"
 </script>
 
 <div class="flex-row border border-gray-400 rounded-xl overflow-hidden w-full">
-    {#if type == "burger"}
+    {#if type == "gyros"}
     <img src={Gyros} alt="kep" class="object-cover w-full h-[200px]"/>
     <p class="text-2xl font-bold ml-3 mt-2">Gyros</p>
     {:else if type == "pizza"}
@@ -33,8 +35,17 @@
     <img src={Sushi} alt="kep" class="object-cover w-full h-[200px]"/>
     <p class="text-2xl font-bold ml-3 mt-2">Sushi</p>
     {/if}
-    <p class="ml-4">30-40 min</p>
+    <div class="flex justify-between">
+        <p class="ml-4">30-40 min</p>
+        <p class="text-center mr-5">{price} Ft</p>
+    </div>
     <div class="flex justify-end">
-        <Button size="sm" class="mx-4 mb-4 mt-2 w-full bg-purple-600 text-white font-medium -">Add to cart</Button>
+        {#if count > 0}
+        <Button size="sm" class="mx-4 mb-4 mt-2 w-full bg-purple-600 text-white font-medium -" on:click={() => {count -= 1}}>Remove</Button>
+        <Button size="sm" class="mx-4 mb-4 mt-2 bg-white hover:bg-white text-black w-[10px] font-medium cursor-default">{count}</Button>
+        <Button size="sm" class="mx-4 mb-4 mt-2 w-full bg-purple-600 text-white font-medium -" on:click={() => {count += 1}}>Add </Button>
+        {:else}
+        <Button size="sm" class="mx-4 mb-4 mt-2 w-full bg-purple-600 text-white font-medium -" on:click={() => {count += 1}}>Add to cart</Button>
+        {/if}
     </div>
 </div>
